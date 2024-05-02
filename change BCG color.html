@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	body{
+	    min-height:25%;
+	    display:flex;
+	    justify-content:center;
+	}
+	.colorBtn{
+	    width:50%
+	    height:30%;
+	    padding:0.5rem;
+	    border:2px solid red;
+	    border-radius:5px;
+	    color: blue;
+	    font-size: 39px;
+	    background: rgba(0,0,0,0.6)
+	    text-transform: capitalize;
+	    cursor:pointer;
+	    outline:none;
+	}
+	.colorBtn:hover {
+	    background:rgb(0,0,0);
+	}
+	</style>
+	
+		<title>Online Editor</title>
+	</head>
+	
+<body>
+<button type="button" class="colorBtn">Press here to change color </button>
+
+<script>
+const colorBtn=document.querySelector('.colorBtn');
+const bodyBcg=document.querySelector('body');
+const colors=['yellow','red','green','blue','purple','pink','indigo','orange','violet','grey'];
+colorBtn.addEventListener('click',changeColor);
+function changeColor(){
+ let random=Math.floor(Math.random()*colors.length) 
+bodyBcg.style.backgroundColor=colors[random];
+}
+</script>
+</body>
+
+</html>

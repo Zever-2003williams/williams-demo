@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Williams webpage</title>
+<style>
+body{
+    background-color:darkblue;
+    
+}
+* {
+    margin:0;
+    padding:0;
+    }
+.main {
+    width:100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(file:///C:/Users/Msughter%20Williams/Desktop/KPIKO%20PICS/Rodriguez.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing:border-box;
+    height: 100vh;
+    background-size: 100%;
+}
+.navbar {
+    width:300vh;
+    height: 75px;
+    margin:auto;
+}
+.icon {
+    width:200px;
+    float:left;
+    height: 70px;
+}
+.logo {
+    color:rgb(10, 236, 10);
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 0;
+    margin-left:0;
+    float: left;
+    padding-top: 10px;
+
+}
+.menu-bar{
+    background:#ff7200;
+    text-align:center;
+}
+.menu-bar ul{
+    display:inline-flex;
+    list-style: none;
+    color:white;
+}
+.menu-bar ul li {
+    width:120px;
+    margin:10px;
+    padding:10px;
+}
+.menu-bar ul li a {
+    text-decoration: none;
+    color:white;
+}
+.active, .menu-bar ul li:hover {
+    background:#6008ee;
+    border-radius:3px;
+}
+.sub-menu-1
+{
+display:none;
+}
+.menu-bar ul li:hover .sub-menu-1 {
+    display:block;
+    position:absolute;
+    margin-top:10px;
+    background: #ff7200;
+    }
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display:block;
+    margin:10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    background-color:blue;
+}
+.sub-menu-2 {
+    display:none;
+}
+.hover-me .sub-menu-2 {
+position:absolute;
+display:block;
+margin-top:-40px;
+margin-left:140px;
+background:rgb(2, 6, 59)
+}
+.search {
+    width: 200px;
+    float:left;
+    position:absolute;
+    margin-left: 1000px;
+}
+.srch {
+
+font-family: 'Times New Roman';
+
+width: 100px;
+
+height: 40px;
+
+background: transparent;
+
+border: 1px solid #ff7200;
+
+margin-top: 13px;
+
+color: white;
+
+border-right: none;
+
+font-size: 12px;
+
+float: left;
+
+padding: 10px;
+
+border-bottom-left-radius: 5px;
+
+border-top-left-radius: 5px;
+
+
+
+}
+
+.btn {
+
+    width: 100px;
+
+    height: 40px;
+
+    background: #ff7200;
+
+    border: 2px solid #ff7200;
+
+    margin-top: 13px;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    border-bottom-right-radius: 5px;
+
+    border-bottom-right-radius: 5px;
+
+}
+
+
+
+.btn:focus {
+
+    outline: none;
+
+
+
+}
+
+.content {
+
+    width: 1200px;
+
+    margin: auto;
+
+    height: auto;
+
+    color: white;
+
+    position: relative;
+
+}
+
+.content.par {
+
+    padding-left: 20px;
+
+    padding-bottom: 25px;
+
+    font-family: Arial;
+
+    letter-spacing: 1.2px;
+
+    line-height: 30px;
+
+    letter-spacing: 2px;
+
+    
+
+}
+
+.content h1 {
+
+    font: size 50px;
+
+    font-family: 'Times New Roman';
+
+    padding-left: 20px;
+
+    margin-top: 9%;
+
+    letter-spacing: 2px;
+
+}
+
+.content .cn {
+
+    width: 160px;
+
+    height: 40px;
+
+    background: #ff7200;
+
+    border:none;
+
+    margin-bottom: 10px;
+
+    margin-left: 20px;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .4s ease;
+
+}
+
+.content .cn a{
+
+    text-decoration: none;
+
+    color:black;
+
+    transition:0.3 ease;
+
+}
+
+.cn:hover{
+
+    background-color: white;
+
+
+
+}
+
+.content span{
+
+    color:#ff7200;
+
+    font-size: 60px;
+
+}
+
+.form{
+
+    width: 250px;
+
+    height: 380px;
+
+    background: rgb(2, 11, 20) ;
+
+    position:absolute;
+
+    top: -20px;
+
+    left:870px;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+
+
+}
+
+.form h2{
+
+    width:200px;
+
+    font-family: sans-serif;
+
+    text-align: center;
+
+    color:#ff7200;
+
+    font-size: 22px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    margin:2px;
+
+    padding:8px;
+
+
+
+}
+
+.form input{
+
+    width: 240px;
+
+    height:25px;
+
+    background:transparent;
+
+    border-bottom: 1px solid #ff7200;
+
+    border-right: none;
+
+    border-top: none;
+
+    border-left:none;
+
+    color:white;
+
+    font: size 15px;
+
+    letter-spacing: 1px;
+
+    margin-top: 30px;
+
+    font-family:sans-serif;
+
+
+
+}
+
+form input:focus{
+
+    outline: none;
+
+}
+
+::placeholder {
+
+    color:white;
+
+    font-family: Arial;
+
+
+
+}
+
+.btnn{
+
+width:240px;
+
+height:40px;
+
+background: #ff7200;
+
+border:none;
+
+margin-top:30px;
+
+font-size:18px;
+
+border-radius: 18px;
+
+cursor: pointer;
+
+color:white;
+
+transition: 0.4s ease;
+
+}
+
+.btnn:hover{
+
+    background: white;
+
+    color:#ff7200;
+
+
+
+}
+
+.btnna{
+
+    text-decoration: none;
+
+    color:black;
+
+    font-weight: bold;
+
+
+
+}
+
+.form .link{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font: size 17px;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+}
+
+.form .link a{
+
+    text-decoration: none;
+
+    color:#ff7200;
+
+    
+
+}
+
+.liw{
+
+    padding-top:15px;
+
+    padding-bottom: 10px;
+
+    text-align: center;
+
+}
+</style>
+</head>
+<body>
+<div class="main">
+<div class="navbar">
+<div class="menu-bar">
+<div class="icon">
+<h2 class="logo">El-Kpiko</h2>
+                             
+</div>
+
+                            
+
+              
+
+<ul>
+
+<li class="active"><a href="#"> HOME</a>
+
+</li>
+
+<li><a href="#"> ABOUT</a>
+
+<div class="sub-menu-1">
+
+<ul>
+
+<li><a href="#">Mission</a></li>
+
+<li><a href="#">Vision</a></li>
+
+<li><a href="#">Team</a></li>
+
+</ul>
+
+</div>
+
+</li>
+
+<li><a href="#"> SERVICES</a>
+
+    <div class="sub-menu-1">
+
+        <ul>
+
+        <li><a href="#">Web Designing </a></li>
+
+        <li class="hover-me"><a href="#">Marketing</a></li>
+
+        <li class="hover-me"><a href="#">Mobile App</a></li>
+
+        </ul>
+
+        </div>     
+
+</li>
+
+
+
+<li><a href="#"> DESIGN</a></li>
+
+<li><a href="#"> CONTACT</a></li>
+
+</ul>  
+
+            </div>
+
+            <div class="search">
+
+                <input class="srch" type="search" name="" placeholder="Type to text">
+
+                <a href="#"><button class="btn">Search</button> </a>
+
+            </div>
+
+        
+
+        </div>
+
+        <div class="content">
+
+            <h1> Web Design & <br><span> Development</span><br> Course</h1>
+
+            <h2 class="par">You can learn how to create an outline on how your website will look like<br> U can <b>call: +234-9065-913-331</b><br> to learn how to design your webpage</h2>
+
+            <br> <button class="cn"><a href="file:///C:/Users/Msughter%20Williams/Desktop/Inbox%20(57)%20-%20professorwilliams11164@gmail.com%20-%20Gmail.html">JOIN US</a></button>
+
+            <div class="form">
+
+                <h2>Login By: <br><b>Zever Williams</b></h2>
+
+                <input type="email" name="email" placeholder="Username or phone number">
+
+                <input type="password" name=""   placeholder="Enter password here">
+
+                <button class="btnn"><a href="C:/Users/Msughter%20Williams/Desktop/Inbox%20(57)%20-%20professorwilliams11164@gmail.com%20-%20Gmail.html">Login</a></button>
+
+
+
+                <p class="link"> Don't have an account <br>
+
+                <a href="#">Sign Up </a>here</p>
+
+                <p class="liw">log in with </p>
+
+            </div>
+
+       
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

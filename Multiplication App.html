@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    height:100%;
+    width:98%;
+    align-items:center;
+    text-align:center;
+    background:blue;
+    font-family:cursive; 
+    flex-direction:column;
+}
+span{
+    display:block;
+    padding:12px;
+}
+.hello{
+    top:0;
+    text-align:center;
+    font-size:35px;
+    font-family:sans-serif;
+    color:white;
+    letter-spacing:1.11px;
+}
+.form{
+    background:white;
+    padding:20px;
+    box-shadow:0 4px 8px rgba(0,0,0.3);
+    border-radius:10px;
+    margin:10px;
+    width:80%;
+    top:50%;
+    left:50%;
+    }
+.input{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    font-size:19px;
+    text-align:center;
+    padding:10px;
+    border:4px solid green;
+    color:green;
+}
+.input::placeholder{
+    color:darkgrey;
+    font-family:Times;
+}
+.btn{
+    background:green;
+    color:white;
+    border:none;
+    display:block;
+    width:100%;
+    padding:10px;
+    font-size:20px;
+    font-family:times;
+    margin:20px 0;
+    border-radius:5px;
+    box-shadow:0 2px 4px black;
+    cursor:pointer;}
+.btn:hover{
+    filter:brightness(0.9);
+}
+.score{
+    color:green;
+    text-align:right;
+    font-family:Times;
+}
+
+</style>
+<title>Multiplication App </title>
+
+</head>
+<body>
+
+<h1 class="hello">Welcome to <span> Williams Layout</span></h1>
+<form type="form" class="form" id="form">
+<h4 class="score" id="score">Score: 0</h4>
+<h1 id="question">What is 1 multiply by 1?</h1>
+<input type="number" class="input" id="input" placeholder="Enter a value" autofocus autocomplete="off">
+<button type="submit" class="btn">Submit </button>
+
+<a href=" ">Click me please</a>
+</form>
+<script>
+const scoreEl=document.getElementById("score");
+
+const num1=Math.ceil(Math.random()*10);
+const num2=Math.ceil(Math.random()*10);
+const questionEl=document.getElementById("question").innerText=correctAns[ramdom];
+const inputEl=document.getElementById("input");
+const formEl=document.getElementById("form");
+const correctAns= ['what is "num1*num2"','what is "num1+num2"','what is "num1/num2"','what is "num1-num2"'];
+function changeQuestion(){
+ let random=Math.floor(Math.random()*correctAns.length) 
+formEl=document.getElementById('question').innerText=correctAns[random];
+}
+
+
+count=0;
+formEl.addEventListener("submit",()=>{
+  
+    scoreEl.innerText=count;
+    const userAns=+inputEl.value;
+    if(userAns==correctAns){
+       alert("correct");
+       scoreEl.innerText=count;
+    }
+    else{
+        count--;
+        alert("wrong");
+        scoreEl.innerText=count;
+    }
+})
+</script>
+</body>
+<html>

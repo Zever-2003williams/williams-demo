@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<script>
+function swap(){
+    var c;
+    var a=Number(document.getElementById("first1").value);
+    var b=Number(document.getElementById("second2").value);
+    c=a;
+    a=b;
+    b=c;
+
+document.getElementById("answer1").innerHTML=a;
+document.getElementById("answer2").innerHTML=b;
+
+    
+}
+</script>
+<h1> Swapping of numbers </h1>
+<input type="text" id="first1">
+<input type="text" id="second2">
+<br></br>
+Value of a:<span id="answer1"></span> <br></br>
+Value of b:<span id="answer2"></span>
+<br></br>
+<button onclick="swap()"> Swap me </button>
+
+
+
+
+
+
+
+
+
+</body>

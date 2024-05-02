@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	</head>
+	<style>
+body{
+margin:0;
+font-family:sans-serif;
+display:flex;
+flex-direction:column;
+height:100vh;
+background:blue;
+width:100%;
+}
+header{
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:20px;
+    text-align:center;
+    color:white;
+    margin-top:10%;   
+}
+.clock{
+    width:100%;
+    display:flex;
+    margin-top:25%;
+    margin-left:5px;  
+}
+.clock div{
+    width:100%;
+    position:relative;
+    margin-left:3px;
+}
+.clock span{
+    width:100%;
+    height:100%;
+    background:slateblue;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:50px;
+    text-shadow:2px 2px 4px black;
+}
+.clock .text{
+    height:30px;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    background:darkblue;
+    opacity:.8;
+}
+.clock #ampm{
+    bottom:0;
+    position:absolute;
+    width:60px;
+    height:30px;
+    font-size:20px;
+    background:green;
+}
+.container{ 
+    margin-top:30%; 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    color:white;  
+}
+
+
+	</style>
+		<title>Kpiko's work'</title>
+<body>
+<header> williams digital clock</header>
+<div class="clock">
+    <div>
+    <span id="hour">00</span>
+    <span class="text">Hours</span>
+    </div>
+    <div>
+    <span id="minutes">00</span>
+    <span class="text">Minutes</span>
+    </div>   
+    <div>
+    <span id="seconds">00</span>
+    <span class="text">Seconds</span>
+    </div> 
+    <div>
+    <span id="ampm">AM</span>
+    </div>
+</div>
+    <p class="container">
+<h1>  </h1>
+</p>
+    
+      
+</body>
+	<script>
+	
+function hello(){
+	var date = new Date(); 
+ hours = date.getHours();
+ minutes= date.getMinutes();
+ seconds= date.getSeconds();
+let ampmel="AM";
+if(hours>=12){
+    document.getElementById("ampm").innerHTML="PM";
+}
+ if(hours>12){
+     hours=hours-12;    
+ }
+ if(hours<10){
+     hours="0"+hours;}
+     
+    if(minutes<10){ minutes="0"+minutes;}
+    
+    if(seconds<10){
+     seconds="0"+seconds;
+ }
+ const hourEl=document.getElementById("hour").innerHTML=hours;
+const minutesEl=document.getElementById("minutes").innerHTML= minutes;
+const secondsEl=document.getElementById("seconds").innerHTML= seconds;
+}
+hello();
+setInterval(hello, 950); 
+
+
+const containerEl=document.querySelector(".container");
+const careers=["𝕄𝕪 𝕟𝕒𝕞𝕖 𝕚𝕤 ℤ𝕖𝕧𝕖𝕣 𝕎𝕚𝕝𝕝𝕚𝕒𝕞𝕤✨😇       ","𝔸𝕞 20𝕪𝕣𝕤 𝕠𝕝𝕕😆     ","𝔸𝕞 in 200 level 𝕤𝕥𝕦𝕕𝕪𝕚𝕟𝕘 𝕔𝕠𝕞𝕡𝕦𝕥𝕖𝕣 𝕤𝕔𝕚𝕖𝕟𝕔𝕖 𝕒𝕥 𝔽𝕦𝕥𝕞𝕚𝕟𝕟𝕒🙃       ", "𝕀 𝕝𝕠𝕧𝕖 𝕞𝕒𝕜𝕚𝕟𝕘 𝕣𝕖𝕤𝕖𝕒𝕣𝕔𝕙, 𝕡𝕝𝕒𝕪𝕚𝕟𝕘 𝕧𝕚𝕕𝕖𝕠 𝕘𝕒𝕞𝕖𝕤 𝕒𝕟𝕕 𝕔𝕠𝕕𝕚𝕟𝕘✨🥂    ","𝔸𝕞 𝕡𝕣𝕠𝕦𝕕𝕝𝕪 𝕒𝕟 𝔸𝕣𝕤𝕖𝕟𝕒𝕝 𝔽𝕒𝕟✨    ","𝕥𝕙𝕒𝕟𝕜𝕤 𝕗𝕠𝕣 𝕪𝕠𝕦𝕣 𝕥𝕚𝕞𝕖 𝕘𝕦𝕪𝕤🤗     ","ℍ𝕖𝕣𝕖 𝕚𝕤 𝕞𝕪 𝕌𝔹𝔸 𝕒𝕔𝕔𝕠𝕦𝕟𝕥 𝕟𝕦𝕞𝕓𝕖𝕣 2126614776✨😇 𝕚𝕟𝕔𝕒𝕤𝕖 𝕦 𝕝𝕠𝕧𝕖 𝕞𝕪 𝕨𝕠𝕣𝕜                "];
+let careerIndex=0;
+let characterIndex=0;
+updateText()
+function updateText(){
+  
+ characterIndex++
+    containerEl.innerHTML=""  +careers[careerIndex].slice(0,characterIndex);
+    if(characterIndex===careers[careerIndex].length){
+        careerIndex++;
+        characterIndex=0;
+    }
+if(careerIndex===careers.length){
+    careerIndex=0;
+}
+    setTimeout(updateText,50);
+    }
+    
+    
+    
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

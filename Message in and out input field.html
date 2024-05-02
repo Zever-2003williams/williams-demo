@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	body{
+	    min-height:30vh;
+	    display:flex;
+	    justify-contents:center;
+	    align-items:center;
+	    background: black;
+	    color:indigo;
+	    font-family: sans-serif;
+	    font-weight:29px;
+	    text-transform:capitalize;
+	}
+	.change {
+	    font-size:19px;
+	    color:grey;
+	    font-weight:bold;
+	    
+	}
+	.logo{
+	    color:grey;   
+	}
+	.container{
+	    text-align:center;
+	    padding:2rem;
+	    border-radius: 11px;
+	    background-color:#fff;
+	    flex: 0 0 80%;
+	}
+	button{
+	    display:block;
+	    font-size:1.09rem;
+	    margin:1rem auto;
+	    padding:0.5rem 1rem;
+	    color:#fff;
+	    background:#6cc3d8;
+	    border-radius:8px;
+	    border:none; 
+	}
+	button:hover{
+	    background:blue;
+	    cursor:pointer;
+	}
+	input[type="text"]{
+	    padding:0.5rem;
+	    margin:.57rem;
+	    border-radius:5px;
+	    font-size:15px;
+	    border:3px solid red;
+	    outline:none;
+	}
+	input[type="text"]:focus{
+	    box-shadow: 0 0 10px yellow;
+	}
+	#messageOut{
+	    margin:0.5rem 0;
+	    color:#88d5e9;
+	    font-size:20px;
+	    width:100%;
+	}
+	
+	</style>
+		<title>Online Editor</title>
+	</head>
+	
+<body>
+<div class="container">
+<h1 class="change"> Welcome to Williams Layout </h1>
+<h1>Message You will like to send</h1>
+<input type="text" name="messageIn" id="messageIn">
+<button type="button" id="sendBtn"> Press to send </button>
+<h1>Last mesaage delivered </h1>
+<h1 id="messageOut"> </h1>
+	
+	</div>
+	
+<script>
+const messageIn=document.querySelector('#messageIn');
+const messageOut=document.querySelector('#messageOut');
+const sendBtn=document.querySelector('#sendBtn');
+ 
+sendBtn.addEventListener('click',sendMsg);
+function sendMsg(){
+    let content=messageIn.value;
+    if(content==''){
+        alert('Please Enter a value');
+    }
+    else{
+        messageOut.innerHTML=content;
+        messageIn.value='';
+    }
+}
+</script>
+</body>
+
+</html>

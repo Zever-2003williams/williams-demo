@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: black;
+    background-position:center;
+    background-size:cover;
+    color:white;
+    font-family:sans-serif;
+}
+.counter-box{
+    flex: 0 0 70%;
+    text-align:center;
+    border:3px solid grey;
+    padding:1rem;
+    font-weight:bold;
+    box-shadow:3px 3px 10px 10px black;
+}
+#counter{
+    font-size:6rem;
+}
+.btn{
+    background:#fff;
+    border-radius:8px;
+    font-size:2rem;
+    padding:0.5rem;
+    margin:.9rem;
+    border:3px solid #f125025;
+    box-shadow:0px 5px #001212;
+    outline:none;
+}
+.btn:hover{
+    background-color:#4caf50;
+    color:white;
+}
+.btn:active{
+    box-shadow:none;
+}
+
+</style>
+<title>Page Title</title>
+</head>
+<body>
+<div class="counter-box">
+<h1 id="counter">0</h1>
+
+<div id="btns">
+<button type="button" class="btn" id="lowerCountBtn">Lower Count</button>
+<button type="button" class="btn" id="clearBtn">Clear Me </button>
+<button type="button" class="btn" id="addCountBtn">Add Count</button>
+
+</div>
+<script>
+const counterEl=document.getElementById("counter");
+const ClearMeEl=document.getElementById("clearBtn");
+const addCount=document.querySelector('#addCountBtn');
+const lowCount=document.querySelector('#lowerCountBtn');
+add=0;
+addCount.addEventListener('click',()=>{
+    add++;
+        counterEl.innerText=add; 
+    if(counterEl.innerText>'0'){
+        counterEl.style.color='green';
+    }
+    else if(counterEl.innerText=='0'){
+        counterEl.style.color='white';
+    }
+    
+   counterEl.animate([{opacity:'0.2'},{opacity:'1.0'}],{duration:500,fill:'forwards'}) 
+});
+
+lowCount.addEventListener('click',()=>{
+    add--;
+    counterEl.innerText=add;
+    
+    if(counterEl.innerText<'0'){
+        counterEl.style.color='red';
+    } else if(counterEl.innerText=='0'){
+        counterEl.style.color='white';
+    }
+    counterEl.animate([{opacity:'0.2'},{opacity:'1.0'}],{duration:500,fill:'forwards'})    
+});
+
+ClearMeEl.addEventListener("click",()=>{
+    add=0;
+    counterEl.innerText=add;
+    counterEl.style.color='white';
+});
+
+
+</script>
+
+</body>
+</html>

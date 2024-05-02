@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script>
+	function getPrime(){
+	    var i,flag=0,number;
+	    number=Number(document.getElementById('N').value);
+	    
+	    
+	    
+	    for(i=2;i<=number/2;i++){
+	        if(number%i==0){
+	            flag=1;
+	            break;
+	        }
+	        }
+	        if(flag==0){
+	            alert(number+"The inputed number is prime");
+	        }
+	        else{
+	            alert(number+"The inputed number is not prime");
+	        }
+	    
+	}
+	</script>
+	<h1>Whether a number is prime or not </h1>
+	<input type="text" name="n" id="N">
+	<button type="button" onclick="getPrime()" value="CHECK">CHECK</button>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>

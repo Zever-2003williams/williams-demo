@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    margin:0;
+}
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:100vh;
+    justify-content:center;
+    background:
+linear-gradient(150deg,purple,blue,purple,blue,red);
+    text-align:center;
+}
+h1{
+    color:white;
+    font-size:50px;
+    font-family:cursive;
+    letter-spacing:4px;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom:32px;
+}
+.btn{
+    padding:10px 20px;
+    width:200px;
+    cursor:pointer;
+    background:orangered;
+    border:none;
+    border-radius:5px;
+    font-size:20px;
+}
+.btn:hover{
+    filter:brightness(0.8);
+}
+.active.container{
+    filter:blur(5px);
+}
+.popup-container{
+    position:fixed;
+    left:50%;
+    width:60%;
+    
+    top:10%;
+    transform:translateX(-50%);
+    background:white;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    background:lightgray;
+    background-size:cover;
+    border-radius:10px;
+    box-shadow:0 4px 8px black;
+    opacity:1;
+    transition:all 0.7s;
+}
+h4{
+    font-family:cursive;
+    font-size:25px;
+    color:blueviolet;
+}
+label{
+    color:blueviolet;
+    font-family:Times;
+}
+.popup-btn{
+    background:orangered;
+    padding:10px;
+    font-size:16px;
+    cursor:pointer;
+    border:2px solid;
+    border-radius:10px;
+}
+.input{
+    border:2px solid;
+    padding:10px;
+    margin:10px 0;
+    font-size:13px;
+    text-align:center;
+}
+.input::placeholder{
+    color:lightgray;
+}
+.close-icon{
+    position:absolute;
+    right:20px;
+    cursor:pointer;
+}
+.close-icon:hover{
+    color:orangered;
+}
+.active.popup-container{
+    visibility:hidden;
+    opacity:0;
+}
+.closeme{
+    padding:5px;
+    background:blueviolet;
+    color:white;
+    border-radius:7px;
+    font-family:cursive;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Welcome to our Website</h1>
+<button class="btn">Click to Join</button>
+</div>
+<div class="popup-container active">
+<h4>20% OFF Offer</h4>
+<label for="email">Email</label>
+<input class="input" type="email" name="email" placeholder="Enter your Email">
+<button class="popup-btn">Join</button>
+<div class="close-icon">
+<button class="closeme">Close Me</button>
+
+</div>
+</div>
+<script>
+const containerEl=document.querySelector(".container");
+const btnEl=document.querySelector(".btn");
+const popupContainerEl=document.querySelector(".popup-container");
+const closeiconEl=document.querySelector(".close-icon");
+
+btnEl.addEventListener("click",popme);
+    function popme(){
+    
+ containerEl.classList.add("active");
+    popupContainerEl.classList.remove("active");
+}
+closeiconEl.addEventListener("click",closeMe);
+function closeMe(){
+    containerEl.classList.remove("active");
+    popupContainerEl.classList.add("active");
+}
+
+
+
+
+
+</script>
+</body>
+</html>

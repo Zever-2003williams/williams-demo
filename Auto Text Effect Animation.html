@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    margin:0;
+    display:flex;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+    background:
+linear-gradient(150deg,purple,blue,purple,blue,red);
+    color: white;
+    font-family:;
+    text-align:center;
+    font-size:18px;
+    margin:25px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>  </h1>
+</div>
+<script>
+const containerEl=document.querySelector(".container");
+const careers=["𝕄𝕪 𝕟𝕒𝕞𝕖 𝕚𝕤 ℤ𝕖𝕧𝕖𝕣 𝕎𝕚𝕝𝕝𝕚𝕒𝕞𝕤✨😇         ","𝔸𝕞 20𝕪𝕣𝕤 𝕠𝕝𝕕😆         ","𝔸𝕞 in 200 level 𝕤𝕥𝕦𝕕𝕪𝕚𝕟𝕘 𝕔𝕠𝕞𝕡𝕦𝕥𝕖𝕣 𝕤𝕔𝕚𝕖𝕟𝕔𝕖 𝕒𝕥 𝔽𝕦𝕥𝕞𝕚𝕟𝕟𝕒🙃          ", "𝕀 𝕝𝕠𝕧𝕖 𝕞𝕒𝕜𝕚𝕟𝕘 𝕣𝕖𝕤𝕖𝕒𝕣𝕔𝕙, 𝕡𝕝𝕒𝕪𝕚𝕟𝕘 𝕧𝕚𝕕𝕖𝕠 𝕘𝕒𝕞𝕖𝕤 𝕒𝕟𝕕 𝕔𝕠𝕕𝕚𝕟𝕘✨🥂         ","𝔸𝕞 𝕡𝕣𝕠𝕦𝕕𝕝𝕪 𝕒𝕟 𝔸𝕣𝕤𝕖𝕟𝕒𝕝 𝔽𝕒𝕟✨          ","𝕥𝕙𝕒𝕟𝕜𝕤 𝕗𝕠𝕣 𝕪𝕠𝕦𝕣 𝕥𝕚𝕞𝕖 𝕘𝕦𝕪𝕤🤗          ","ℍ𝕖𝕣𝕖 𝕚𝕤 𝕞𝕪 𝕌𝔹𝔸 𝕒𝕔𝕔𝕠𝕦𝕟𝕥 𝕟𝕦𝕞𝕓𝕖𝕣 2126614776✨😇 𝕚𝕟𝕔𝕒𝕤𝕖 𝕦 𝕝𝕠𝕧𝕖 𝕞𝕪 𝕨𝕠𝕣𝕜      "];
+let careerIndex=0;
+let characterIndex=0;
+updateText()
+function updateText(){
+  
+ characterIndex++
+    containerEl.innerHTML=""  +careers[careerIndex].slice(0,characterIndex);
+    if(characterIndex===careers[careerIndex].length){
+        careerIndex++;
+        characterIndex=0;
+    }
+if(careerIndex===careers.length){
+    careerIndex=0;
+}
+    setTimeout(updateText,50);
+    }
+
+</script>
+</body>
+</html>

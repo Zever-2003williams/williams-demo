@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	body{
+	    height:80%;
+	    min-height:100vh;
+	    display:flex;
+	    justify-contents:center;
+	    align-items:center;
+	    background: linear-gradient(blue,red);
+	    background-size:cover;
+	    color:blue;
+	    width:100%;
+	    font-family: sans-serif;
+	    font-weight:29px;
+	    text-transform:capitalize;
+	}
+	.logo{
+	    color:grey;
+	    
+	}
+	.container{
+	    text-align:center;
+	    padding:2rem;
+	    border-radius: 5px;
+	    background-color:#fff;
+	    flex: 0 0 80%;
+	}
+	.quoteBtn{
+	    border:none;
+	    background: linear-gradient(yellow, blue);
+	    font-size:1.3rem;
+	    padding:0.25rem 0.5rem;
+	    border-radius:7px;
+	    cursor:pointer;
+	    color:white;
+	}
+	.quoteBtn:hover{
+	    color:#ffd800;
+	}
+	blockquote{
+	    background:#f9f9f9;
+	    border-left:10px solid green;
+	    padding:0.5rem;
+	    margin:1.5rem;
+	    color:black;
+	}
+	.quoteAuthor{
+	    color:black;
+	}
+	
+	
+	
+	
+	</style>
+	
+		<title>Online Editor</title>
+	</head>
+	
+<body>
+<div class="container">
+<h1 class="logo"> Welcome to Williams platform </h1>
+<h2>Quotes from Eminents </h2>
+
+<button type="button" class="quoteBtn">Press to change quote</button>
+<blockquote>
+<h2 class="quote">Quote</h2>
+</blockquote>
+<h3 class="quoteAuthor">Author of the quote</h3>
+	</div>
+	
+	<script>
+	const quoteBtn=document.querySelector('.quoteBtn');
+const quote=document.querySelector('.quote');
+const quoteAuthor=document.querySelector('.quoteAuthor');
+
+	const hello=[
+	{
+	    name: 'Antse',
+	    quote: 'Orne Mdoo ôr?🙃.'
+	},
+{
+	    name: 'Mouseur Var',
+	    quote: 'Chââ ave sha tebe ne💀.'
+	},
+
+	{
+	    name: 'Celesbrum',
+	    quote: 'Orkpe when are your fathers coming🤕.'
+	},
+
+	{
+	    name: 'TeeZy(tersoo)',
+	    quote: 'Omo nah de place be dis?🤖.'
+	},
+	
+	{
+	    name: 'Major',
+	    quote: 'who cough dat cough?🕵️‍♂️'
+	},
+	
+	{
+	    name: 'Calling bell',
+	    quote: 'Orban haam shwa💩.'
+	},
+	{
+	    name: 'Crusher-keghtor',
+	    quote: 'Omo den no dey wash dat shirt😷'
+	},
+	{
+	    name: 'Hyuma',
+	    quote: 'Do you know how long i have been hanging on the window?🤐'
+	},
+	{
+	    name: 'Mr Buchi',
+	    quote: 'u have learnt to have proven u know noithing😑'
+	},
+	{
+	    name: 'Celesbrum',
+	    quote: 'The boys father is no more🙃'
+	},
+	{
+	    name: 'Calculus',
+	    quote: 'A man👆'
+	},
+	{
+	    name: 'Calculus',
+	    quote: 'I tell u dat👩‍🚒'
+	},
+	{
+	    name: 'Ozor-Pman',
+	    quote: 'sometimes i wonder why?🤷‍♂️'
+	},
+	{
+	    name: 'Hyuma',
+	    quote: 'Can you remember now🤔'
+	},
+	
+	{
+	    name: 'Mr Buchi',
+	    quote: 'BM wan ne ngu koon a koo kwagh heen heen🗣️'
+	},
+	{
+	    name: 'Chi-boi to Ugande',
+	    quote: 'Nenge shi me taau👹🙃🤣'
+	},
+	
+	{
+	    name: 'Sedi',
+	    quote: 'Or or orne cho chon mo chipokk🕵️🏻'
+	},
+	{
+	    name: 'Mr.Orhena',
+	    quote: 'plovision or no plovision he lesumes👀'
+	},
+	
+	{
+	    name: 'Akpagher',
+	    quote: 'Ahijo boom gate mgba stroke🤕😷'
+	},
+	{
+	    name: 'Robin hood',
+	    quote: 'BM shi M kpaka ve😏'
+	},
+	{
+	    name: 'Kpoya',
+	    quote: 'What is my downfall🤷‍♀️'
+	},
+	{
+	    name: 'Utukuh',
+	    quote: 'Orne u oriyol kpa?👷'
+	},
+	
+	{
+	    name: 'Snr mahn😅',
+	    quote: 'Omo my doctor say me ah no gat bath for 3yrs🤥'
+	},
+	{
+	    name: 'Kpoya',
+	    quote: 'Thanks for calling me a mugu- A successful Business Man🙃🙃'
+	},
+	{
+	    name: 'Negba',
+	    quote: 'enior Pata tindin sha cool ye mda too poon mva nawn🤦‍♂️🤣'
+	},
+	{
+	    name: 'Negba',
+	    quote: 'Wen ime ka a va ya, darkness ka a yevese🙃'
+	},
+	{
+	    name: 'Adejo',
+	    quote: 'FCS oo Yes Headboy😔'
+	},
+	{
+	    name: 'Adejo',
+	    quote: '(Adejo Happy Birthday)- Same to you'
+	},
+	{
+	    name: 'Mantissa',
+	    quote: 'U dont know this trees u see here are ur ancestors🤓'
+	},
+	{
+	    name: 'Light',
+	    quote: 'Prefect u gave me 2 yams instead of 3 yams🤔'
+	},
+	
+	{
+	    name: 'Chapii',
+	    quote: 'Aondokator-Me ah kpe yeee😬🤣'
+	},
+	
+	{
+	    name: 'Tongo vs Levels',
+	    quote: 'Se Nongo nom, kpa dey keren juu man angahar ga😆'
+	},
+	]
+	
+
+quoteBtn.addEventListener('click',changeColor);
+function changeColor(){
+ let number=Math.floor(Math.random()*hello.length);
+ quoteAuthor.innerHTML=hello[number].name;
+ quote.innerHTML=hello[number].quote;
+ }
+
+</script>
+</body>
+
+</html>
